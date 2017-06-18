@@ -37,3 +37,9 @@ plt.scatter(y_test,pred)
 from sklearn import metrics
 print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test,pred)))
 print('R2=', metrics.r2_score(y_test,pred))
+
+#%%
+sns.distplot((pred),bins=50);
+coeffecients = pd.DataFrame(LM.coef_,X.columns)
+coeffecients.columns = ['Coeffecient']
+print(coeffecients)
